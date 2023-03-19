@@ -8,7 +8,7 @@ using IntegorPublicDto.Authorization.Users;
 
 namespace IntegorServicesInteraction.Authorization
 {
-    public interface IAuthorizationUsersApi
+    public interface IAuthorizationServiceUsersApi
 	{
         Task<ServiceResponse<UserAccountInfoDto>> GetMeAsync(string accessToken);
 

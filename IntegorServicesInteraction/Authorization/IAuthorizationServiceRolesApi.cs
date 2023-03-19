@@ -8,7 +8,7 @@ using IntegorPublicDto.Authorization.Roles;
 
 namespace IntegorServicesInteraction.Authorization
 {
-    public interface IAuthorizationRolesApi
+    public interface IAuthorizationServiceRolesApi
 	{
 		Task<ServiceResponse<UserRoleFullDto[]>> GetAllAsync();
     }
