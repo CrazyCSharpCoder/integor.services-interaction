@@ -13,7 +13,7 @@ namespace IntegorPublicDto.Authorization.Users.Input
         [Required(ErrorMessage = RequiredErrorMessage)]
         [EmailAddress(ErrorMessage = EmailAddressErrorMessage)]
         [MaxLength(EMailLength, ErrorMessage = MaxStringLengthErrorMessage)]
-        public string Email { get; set; } = null!;
+        public string EMail { get; set; } = null!;
 
         [Required(ErrorMessage = RequiredErrorMessage)]
         [RegularExpression(PasswordValidatonRegex, ErrorMessage = IncorrectPasswordErrorMessage)]
