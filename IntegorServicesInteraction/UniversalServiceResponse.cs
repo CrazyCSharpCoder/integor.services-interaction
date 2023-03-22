@@ -1,10 +1,10 @@
-﻿using IntegorErrorsHandling;
-using Newtonsoft.Json.Linq;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
+using IntegorErrorsHandling;
 
 namespace IntegorServicesInteraction
 {
@@ -14,13 +14,13 @@ namespace IntegorServicesInteraction
 		{
 		}
 
-		public UniversalServiceResponse(int statusCode, object value, Dictionary<string, string> cookies)
-			: base(statusCode, value, cookies)
+		public UniversalServiceResponse(int statusCode, object value, IEnumerable<string> setCookieHeaders)
+			: base(statusCode, value, setCookieHeaders)
 		{
 		}
 
-		public UniversalServiceResponse(int statusCode, IEnumerable<IResponseError> errors, Dictionary<string, string> cookies)
-			: base(statusCode, errors, cookies)
+		public UniversalServiceResponse(int statusCode, IEnumerable<IResponseError> errors, IEnumerable<string> setCookieHeaders)
+			: base(statusCode, errors, setCookieHeaders)
 		{
 		}
 
