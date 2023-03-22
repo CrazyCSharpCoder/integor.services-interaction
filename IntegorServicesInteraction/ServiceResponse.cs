@@ -22,10 +22,10 @@ namespace IntegorServicesInteraction
 			Cookies = new Dictionary<string, string>();
         }
 
-        public ServiceResponse(int statusCode, TResponseObject value, Dictionary<string, string> cookies)
+        public ServiceResponse(int statusCode, TResponseObject? value, Dictionary<string, string> cookies)
 		{
 			StatusCode = statusCode;
-			Value = value ?? throw new ArgumentNullException(nameof(value));
+			Value = value;
 			Cookies = cookies ?? throw new ArgumentNullException(nameof(cookies));
 		}
 
@@ -36,7 +36,7 @@ namespace IntegorServicesInteraction
 			Cookies = cookies ?? throw new ArgumentNullException(nameof(cookies));
 		}
 
-        public ServiceResponse(int statusCode, TResponseObject value)
+        public ServiceResponse(int statusCode, TResponseObject? value)
 			: this(statusCode, value, new Dictionary<string, string>())
         {
         }
