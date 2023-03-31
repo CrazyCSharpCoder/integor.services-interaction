@@ -10,8 +10,5 @@ namespace IntegorServicesInteraction
 	public abstract class ServiceConfiguration
 	{
 		public string Url { get; set; } = null!;
-		public string ApiLocalPath { get; set; } = null!;
-
-		public string GetFullApiPath() => Path.Combine(Url, ApiLocalPath);
 	}
 }
