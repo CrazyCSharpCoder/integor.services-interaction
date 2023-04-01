@@ -16,6 +16,8 @@ namespace IntegorServicesInteraction
 		public TResponseObject? Value { get; }
 		public IResponseError[]? Errors { get; }
 
+		public bool Ok => StatusCode >= 200 && StatusCode < 300;
+
         public ServiceResponse(int statusCode, UserAuthentication authenticationResult, TResponseObject? value = null)
 		{
 			StatusCode = statusCode;
