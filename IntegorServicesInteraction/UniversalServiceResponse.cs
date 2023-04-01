@@ -10,13 +10,13 @@ namespace IntegorServicesInteraction
 {
 	public class UniversalServiceResponse : ServiceResponse<object>
 	{
-		public UniversalServiceResponse(int statusCode, object? value = null, IEnumerable<string>? setCookieHeaders = null)
-			: base(statusCode, value, setCookieHeaders)
+		public UniversalServiceResponse(int statusCode, UserAuthentication authenticationResult, object? value = null)
+			: base(statusCode, authenticationResult, value)
 		{
 		}
 
-		public UniversalServiceResponse(int statusCode, IEnumerable<IResponseError> errors, IEnumerable<string>? setCookieHeaders = null)
-			: base(statusCode, errors, setCookieHeaders)
+		public UniversalServiceResponse(int statusCode, UserAuthentication authenticationResult, IEnumerable<IResponseError> errors)
+			: base(statusCode, authenticationResult, errors)
 		{
 		}
 	}

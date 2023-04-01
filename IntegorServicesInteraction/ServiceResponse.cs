@@ -11,23 +11,25 @@ namespace IntegorServicesInteraction
 	public class ServiceResponse<TResponseObject> where TResponseObject : class
 	{
 		public int StatusCode { get; }
-		public string[]? SetCookieHeaders { get; }
+		public UserAuthentication AuthenticationResult { get; }
 
 		public TResponseObject? Value { get; }
 		public IResponseError[]? Errors { get; }
 
-        public ServiceResponse(int statusCode, TResponseObject? value = null, IEnumerable<string>? setCookieHeaders = null)
+        public ServiceResponse(int statusCode, UserAuthentication authenticationResult, TResponseObject? value = null)
 		{
 			StatusCode = statusCode;
+
 			Value = value;
-			SetCookieHeaders = setCookieHeaders?.ToArray();
+			AuthenticationResult = authenticationResult;
 		}
 
-        public ServiceResponse(int statusCode, IEnumerable<IResponseError> errors, IEnumerable<string>? setCookieHeaders = null)
+        public ServiceResponse(int statusCode, UserAuthentication authenticationResult, IEnumerable<IResponseError> errors)
 		{
 			StatusCode = statusCode;
+
 			Errors = errors?.ToArray() ?? throw new ArgumentNullException(nameof(errors));
-			SetCookieHeaders = setCookieHeaders?.ToArray();
+			AuthenticationResult = authenticationResult;
 		}
 	}
 }
