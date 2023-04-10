@@ -10,8 +10,18 @@ namespace IntegorServicesInteraction
 {
 	public class UniversalServiceResponse : ServiceResponse<object>
 	{
+		public UniversalServiceResponse(int statusCode, object? value = null)
+			: base(statusCode, value)
+		{
+		}
+
 		public UniversalServiceResponse(int statusCode, UserAuthentication authenticationResult, object? value = null)
 			: base(statusCode, authenticationResult, value)
+		{
+		}
+
+		public UniversalServiceResponse(int statusCode, IEnumerable<IResponseError> errors)
+			: base(statusCode, errors)
 		{
 		}
 

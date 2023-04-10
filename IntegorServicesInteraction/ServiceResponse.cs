@@ -18,7 +18,12 @@ namespace IntegorServicesInteraction
 
 		public bool Ok => StatusCode >= 200 && StatusCode < 300;
 
-        public ServiceResponse(int statusCode, UserAuthentication authenticationResult, TResponseObject? value = null)
+		public ServiceResponse(int statusCode, TResponseObject? value = null)
+			: this(statusCode, new UserAuthentication(null, null), value)
+		{
+		}
+
+		public ServiceResponse(int statusCode, UserAuthentication authenticationResult, TResponseObject? value = null)
 		{
 			StatusCode = statusCode;
 
@@ -26,7 +31,12 @@ namespace IntegorServicesInteraction
 			AuthenticationResult = authenticationResult;
 		}
 
-        public ServiceResponse(int statusCode, UserAuthentication authenticationResult, IEnumerable<IResponseError> errors)
+		public ServiceResponse(int statusCode, IEnumerable<IResponseError> errors)
+			: this(statusCode, new UserAuthentication(null, null), errors)
+		{
+		}
+
+		public ServiceResponse(int statusCode, UserAuthentication authenticationResult, IEnumerable<IResponseError> errors)
 		{
 			StatusCode = statusCode;
 
