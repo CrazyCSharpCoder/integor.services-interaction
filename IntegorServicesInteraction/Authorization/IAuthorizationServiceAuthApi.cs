@@ -13,6 +13,8 @@ namespace IntegorServicesInteraction.Authorization
 	{
         Task<ServiceResponse<UserAccountInfoDto>> RegisterAsync(RegisterUserDto dto);
 		Task<ServiceResponse<UserAccountInfoDto>> LoginAsync(LoginUserDto dto);
+
+		Task<ServiceResponse<UserAccountInfoDto>> GetMeAsync(string accessToken);
 		Task<ServiceResponse<UserAccountInfoDto>> RefreshAsync(string refreshToken);
     }
 }

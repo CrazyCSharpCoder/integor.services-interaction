@@ -10,8 +10,6 @@ namespace IntegorServicesInteraction.Authorization
 {
     public interface IAuthorizationServiceUsersApi
 	{
-        Task<ServiceResponse<UserAccountInfoDto>> GetMeAsync(string accessToken);
-
         Task<ServiceResponse<UserAccountInfoDto>> GetByIdAsync(int id);
         Task<ServiceResponse<UserAccountInfoDto>> GetByEmailAsync(string email);
     }
