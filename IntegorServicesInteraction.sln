@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegorServicesInteraction", "IntegorServicesInteraction\IntegorServicesInteraction.csproj", "{CC4C1945-E276-4E06-9AE1-C4D2D1FBFA57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegorPublicDto", "IntegorPublicDto\IntegorPublicDto.csproj", "{7C917964-F25E-497D-85B8-C931EB6374F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC4C1945-E276-4E06-9AE1-C4D2D1FBFA57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC4C1945-E276-4E06-9AE1-C4D2D1FBFA57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC4C1945-E276-4E06-9AE1-C4D2D1FBFA57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC4C1945-E276-4E06-9AE1-C4D2D1FBFA57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C917964-F25E-497D-85B8-C931EB6374F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C917964-F25E-497D-85B8-C931EB6374F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C917964-F25E-497D-85B8-C931EB6374F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C917964-F25E-497D-85B8-C931EB6374F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3D73016A-86B3-4F8F-B309-20BA8F9C8CE6}
+	EndGlobalSection
+EndGlobal
